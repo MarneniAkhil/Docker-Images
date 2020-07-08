@@ -16,7 +16,6 @@ FROM python:latest
 LABEL source = "python"
 
 #$ docker run -it --rm --name my-running-script -v "$PWD":https://github.com/MarneniAkhil/Docker-Images.git -w https://github.com/MarneniAkhil/Docker-Images.git python:3 python SamplePython.py
-
-EXPOSE 80
+ADD https://github.com/MarneniAkhil/Docker-Images.git/SamplePython.py /
 
 CMD [ "python", "https://github.com/MarneniAkhil/Docker-Images.git/SamplePython.py" ] 
